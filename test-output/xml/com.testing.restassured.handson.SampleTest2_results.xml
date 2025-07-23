@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RestAssuredProject"
+           tests="2"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.008">
+    <properties></properties>
+
+
+
+            <testcase
+                name="getRequest"
+                time="0.004"
+                classname="com.testing.restassured.handson.SampleTest2">
+            </testcase>
+            <testcase
+                name="getRequest2"
+                time="0.004"
+                classname="com.testing.restassured.handson.SampleTest2">
+            </testcase>
+</testsuite>
