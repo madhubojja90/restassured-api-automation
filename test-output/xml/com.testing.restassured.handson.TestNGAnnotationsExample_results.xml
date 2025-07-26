@@ -12,11 +12,11 @@
             <testcase
                 name="test1"
                 time="0.004"
-                classname="com.testing.restassured.handson.TestNGAnnotationsExample">
+                classname="com.testing.restassured.com.restassured.restfulbooker.tests.TestNGAnnotationsExample">
             </testcase>
             <testcase
                 name="test2"
                 time="0.004"
-                classname="com.testing.restassured.handson.TestNGAnnotationsExample">
+                classname="com.testing.restassured.com.restassured.restfulbooker.tests.TestNGAnnotationsExample">
             </testcase>
 </testsuite>

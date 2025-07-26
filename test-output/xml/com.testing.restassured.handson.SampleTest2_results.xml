@@ -12,11 +12,11 @@
             <testcase
                 name="getRequest"
                 time="0.004"
-                classname="com.testing.restassured.handson.SampleTest2">
+                classname="com.testing.restassured.com.restassured.restfulbooker.tests.SampleTest2">
             </testcase>
             <testcase
                 name="getRequest2"
                 time="0.004"
-                classname="com.testing.restassured.handson.SampleTest2">
+                classname="com.testing.restassured.com.restassured.restfulbooker.tests.SampleTest2">
             </testcase>
 </testsuite>
