@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.008">
+           time="0.002">
     <properties></properties>
 
 
 
             <testcase
-                name="test1"
-                time="0.004"
-                classname="com.testing.restassured.com.restassured.restfulbooker.tests.TestNGAnnotationsExample">
+                name="test2"
+                time="0.001"
+                classname="com.testing.restassured.handson.TestNGAnnotationsExample">
             </testcase>
             <testcase
-                name="test2"
-                time="0.004"
-                classname="com.testing.restassured.com.restassured.restfulbooker.tests.TestNGAnnotationsExample">
+                name="test1"
+                time="0.001"
+                classname="com.testing.restassured.handson.TestNGAnnotationsExample">
             </testcase>
 </testsuite>

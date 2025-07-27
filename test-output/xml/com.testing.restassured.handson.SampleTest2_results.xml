@@ -4,19 +4,19 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.008">
+           time="0.009">
     <properties></properties>
 
 
 
             <testcase
-                name="getRequest"
-                time="0.004"
-                classname="com.testing.restassured.com.restassured.restfulbooker.tests.SampleTest2">
+                name="getRequest2"
+                time="0.006"
+                classname="com.testing.restassured.handson.SampleTest2">
             </testcase>
             <testcase
-                name="getRequest2"
-                time="0.004"
-                classname="com.testing.restassured.com.restassured.restfulbooker.tests.SampleTest2">
+                name="getRequest"
+                time="0.003"
+                classname="com.testing.restassured.handson.SampleTest2">
             </testcase>
 </testsuite>
