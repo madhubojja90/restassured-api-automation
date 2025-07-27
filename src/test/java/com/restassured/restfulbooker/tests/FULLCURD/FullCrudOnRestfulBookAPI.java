@@ -2,6 +2,7 @@ package com.restassured.restfulbooker.tests.FULLCURD;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -9,6 +10,8 @@ import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class FullCrudOnRestfulBookAPI {
     RequestSpecification requestSpecification= RestAssured.given();
@@ -91,6 +94,29 @@ public void getBookingId()
         validatableResponse.log().all().statusCode(200);
         validatableResponse.body("firstname", Matchers.equalTo("Madhu"));
         validatableResponse.body("lastname", Matchers.equalTo("Bojja"));
+
+        // Using JsonPath for additional manual validation
+        String fullJsonResponseString = response.asString();
+        JsonPath jsonPath = new JsonPath(fullJsonResponseString);
+
+        Assert.assertEquals(jsonPath.getString("firstname"), "Madhu");
+        Assert.assertEquals(jsonPath.getString("lastname"), "Bojja");
+        Assert.assertEquals((int) jsonPath.getInt("totalprice"), 111);
+        Assert.assertTrue(jsonPath.getBoolean("depositpaid"));
+        Assert.assertEquals(jsonPath.getString("bookingdates.checkin"), "2018-01-01");
+        Assert.assertEquals(jsonPath.getString("bookingdates.checkout"), "2019-01-01");
+        Assert.assertEquals(jsonPath.getString("additionalneeds"), "Breakfast");
+
+        //AsserJ validations
+
+        assertThat(jsonPath.getString("firstname")).isEqualTo("Madhu");
+        assertThat(jsonPath.getString("lastname")).isEqualTo("Bojja");
+        assertThat(jsonPath.getInt("totalprice")).isEqualTo(111);
+        assertThat(jsonPath.getInt("totalprice")).isNotNegative();
+        assertThat(jsonPath.getBoolean("depositpaid")).isTrue();
+        assertThat(jsonPath.getString("bookingdates.checkin")).isEqualTo("2018-01-01");
+        assertThat(jsonPath.getString("bookingdates.checkout")).isEqualTo("2019-01-01");
+        assertThat(jsonPath.getString("additionalneeds")).isEqualTo("Breakfast");
     }
 
 }
